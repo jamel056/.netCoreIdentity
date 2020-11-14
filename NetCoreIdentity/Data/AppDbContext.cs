@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using NetCoreIdentity.Models;
 
 namespace NetCoreIdentity.Data
 {
@@ -10,6 +11,7 @@ namespace NetCoreIdentity.Data
 
         }
 
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

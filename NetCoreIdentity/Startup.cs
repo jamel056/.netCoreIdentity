@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetCoreIdentity.Data;
+using NetCoreIdentity.Models;
 
 namespace NetCoreIdentity
 {
@@ -29,7 +30,7 @@ namespace NetCoreIdentity
                 }
                 );
 
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.Password.RequiredLength = 8;
             }
