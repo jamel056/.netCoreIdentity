@@ -54,3 +54,15 @@ C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\NetCoreIdentity.deps.json
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\NetCoreIdentity.runtimeconfig.json
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\NetCoreIdentity.runtimeconfig.dev.json
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\NetCoreIdentity.dll
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\NetCoreIdentity.pdb
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.dll
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.pdb
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.genruntimeconfig.cache
