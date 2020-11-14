@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\NetCoreIdentity.exe
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.csprojAssemblyReference.cache
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.AssemblyInfo.cs
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.RazorTargetAssemblyInfo.cache
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\staticwebassets\NetCoreIdentity.StaticWebAssets.Manifest.cache
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\staticwebassets\NetCoreIdentity.StaticWebAssets.xml
