@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NetCoreIdentity.Data;
 using NetCoreIdentity.Models;
+using NetCoreIdentity.Repositories;
 
 namespace NetCoreIdentity
 {
@@ -35,6 +36,9 @@ namespace NetCoreIdentity
                 options.Password.RequiredLength = 8;
             }
                 ).AddEntityFrameworkStores<AppDbContext>();
+
+
+            services.AddScoped<IRegistrationRepository, RegistrationRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +49,7 @@ namespace NetCoreIdentity
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
