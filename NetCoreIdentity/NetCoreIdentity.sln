@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreIdentity", "NetCoreIdentity.csproj", "{444037B4-6F74-4B47-B117-52A48C65331A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{444037B4-6F74-4B47-B117-52A48C65331A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444037B4-6F74-4B47-B117-52A48C65331A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444037B4-6F74-4B47-B117-52A48C65331A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{444037B4-6F74-4B47-B117-52A48C65331A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C588D15-C906-4409-9F94-76554F89F1A1}
+	EndGlobalSection
+EndGlobal
