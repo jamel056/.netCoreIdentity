@@ -28,14 +28,12 @@ namespace NetCoreIdentity
             services.AddDbContext<AppDbContext>(options =>
                 {
                     options.UseSqlServer(_configuration.GetConnectionString("IdentityConnection"));
-                }
-                );
+                });
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.Password.RequiredLength = 8;
-            }
-                ).AddEntityFrameworkStores<AppDbContext>();
+            }).AddEntityFrameworkStores<AppDbContext>();
 
 
             services.AddScoped<IRegistrationRepository, RegistrationRepository>();

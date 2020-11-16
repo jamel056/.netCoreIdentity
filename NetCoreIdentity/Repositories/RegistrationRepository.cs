@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using NetCoreIdentity.Data;
 using NetCoreIdentity.Models;
 using NetCoreIdentity.Requests;
 using System.Threading.Tasks;
@@ -9,25 +7,23 @@ namespace NetCoreIdentity.Repositories
 {
     public interface IRegistrationRepository
     {
-        Task<ApplicationUser> GetUser(int id);
+        Task<ApplicationUser> GetUser(string id);
         Task<bool> RegisterUser(ApplicationUserRequest request);
-        Task<bool> EditUser(EditUserRequest request, int id);
-        Task<bool> DeleteUser(int id);
+        Task<bool> EditUser(EditUserRequest request, string id);
+        Task<bool> DeleteUser(string id);
     }
     public class RegistrationRepository : IRegistrationRepository
     {
-        private readonly AppDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public RegistrationRepository(AppDbContext context, UserManager<ApplicationUser> userManager)
+        public RegistrationRepository(UserManager<ApplicationUser> userManager)
         {
-            _context = context;
             _userManager = userManager;
         }
 
-        public async Task<bool> DeleteUser(int id)
+        public async Task<bool> DeleteUser(string id)
         {
-            var userFromDb = await _context.ApplicationUsers.SingleOrDefaultAsync(x => x.Id == id);
+            var userFromDb = await _userManager.FindByIdAsync(id);
 
             if (userFromDb == null) return false;
 
@@ -35,9 +31,9 @@ namespace NetCoreIdentity.Repositories
             return isDeleted.Succeeded;
         }
 
-        public async Task<bool> EditUser(EditUserRequest request, int id)
+        public async Task<bool> EditUser(EditUserRequest request, string id)
         {
-            var userFromDb = await _context.ApplicationUsers.SingleOrDefaultAsync(x => x.Id == id);
+            var userFromDb = await _userManager.FindByIdAsync(id);
             if (userFromDb == null) return false;
 
             // maping
@@ -50,9 +46,9 @@ namespace NetCoreIdentity.Repositories
             return isEditted.Succeeded;
         }
 
-        public async Task<ApplicationUser> GetUser(int id)
+        public async Task<ApplicationUser> GetUser(string id)
         {
-            return await _context.ApplicationUsers.SingleOrDefaultAsync(x => x.Id == id);
+            return await _userManager.FindByIdAsync(id);
         }
 
         public async Task<bool> RegisterUser(ApplicationUserRequest request)
