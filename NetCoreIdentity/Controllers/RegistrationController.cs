@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NetCoreIdentity.Data.Const;
 using NetCoreIdentity.Repositories;
 
 namespace NetCoreIdentity.Controllers
 {
-    [Route("api/[controller]")]
+    [Route(Routes.Base)]
     [ApiController]
     public class RegistrationController : ControllerBase
     {
