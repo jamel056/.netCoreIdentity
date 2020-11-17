@@ -15,10 +15,12 @@ namespace NetCoreIdentity.Repositories
     public class RegistrationRepository : IRegistrationRepository
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public RegistrationRepository(UserManager<ApplicationUser> userManager)
+        public RegistrationRepository(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         public async Task<bool> DeleteUser(string id)

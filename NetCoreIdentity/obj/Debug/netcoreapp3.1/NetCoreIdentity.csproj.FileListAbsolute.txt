@@ -1,6 +1,5 @@
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\bin\Debug\netcoreapp3.1\NetCoreIdentity.exe
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.csprojAssemblyReference.cache
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.AssemblyInfoInputs.cache
@@ -66,3 +65,4 @@ C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.dll
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.pdb
 C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\NetCoreIdentity.genruntimeconfig.cache
+C:\Users\user\source\repos\.netCoreIdentity\NetCoreIdentity\obj\Debug\netcoreapp3.1\scopedcss\bundle\NetCoreIdentity.styles.css
