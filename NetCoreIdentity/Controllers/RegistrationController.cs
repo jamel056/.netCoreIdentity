@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NetCoreIdentity.Data.Const;
+using NetCoreIdentity.DTO;
 using NetCoreIdentity.Repositories;
 using NetCoreIdentity.Requests;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace NetCoreIdentity.Controllers
             if (userFromDb == null)
                 return NotFound();
 
-            return Ok(userFromDb);
+            return Ok(new UserDTO(userFromDb));
         }
 
         // https://localhost:5001/api/v1/registration/create   with a body(request) information of user
