@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using NetCoreIdentity.Models;
 using NetCoreIdentity.Requests;
+using System;
 using System.Threading.Tasks;
 
 namespace NetCoreIdentity.Repositories
@@ -56,6 +57,8 @@ namespace NetCoreIdentity.Repositories
         public async Task<bool> RegisterUser(ApplicationUserRequest request)
         {
             var user = request.GetModel();
+            user.Id = Guid.NewGuid().ToString();
+
             var response = await _userManager.CreateAsync(user, request.Password);
             return response.Succeeded;
         }

@@ -12,6 +12,13 @@
         {
             public const string Base = Routes.Base + "/registration";
 
+            public const string Create = Base + "/create";
+
+            public const string Get = Base + "/{id}";
+
+            public const string Delete = Base + "/{id}";
+
+            public const string Edit = Base + "/{id}";
         }
     }
 }
