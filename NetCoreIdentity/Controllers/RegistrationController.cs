@@ -63,5 +63,24 @@ namespace NetCoreIdentity.Controllers
             var isDeleted = await _registrationRepository.DeleteUser(id);
             return Ok(isDeleted);
         }
+
+        // https://localhost:5001/api/v1/registration/logIn
+        [Route(Routes.Registration.LogIn)]
+        [HttpPost]
+        public async Task<IActionResult> LogIn(SignInRequest request)
+        {
+            var IsloggedIn = await _registrationRepository.LogIn(request);
+
+            return Ok(IsloggedIn);
+        }
+
+        // https://localhost:5001/api/v1/registration/logOut
+        [Route(Routes.Registration.LogOut)]
+        [HttpPost]
+        public async Task<IActionResult> LogOut()
+        {
+            var IsloggedOut = await _registrationRepository.LogOut();
+            return Ok(IsloggedOut);
+        }
     }
 }

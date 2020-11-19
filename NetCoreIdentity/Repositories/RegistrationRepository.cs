@@ -12,6 +12,10 @@ namespace NetCoreIdentity.Repositories
         Task<bool> RegisterUser(ApplicationUserRequest request);
         Task<bool> EditUser(EditUserRequest request, string id);
         Task<bool> DeleteUser(string id);
+
+        //************* Sign Methods *************
+        Task<bool> LogIn(SignInRequest request);
+        Task<bool> LogOut();
     }
     public class RegistrationRepository : IRegistrationRepository
     {
@@ -61,6 +65,19 @@ namespace NetCoreIdentity.Repositories
 
             var response = await _userManager.CreateAsync(user, request.Password);
             return response.Succeeded;
+        }
+
+        //************* Sign Methods *************
+        public async Task<bool> LogIn(SignInRequest request)
+        {
+            var result = await _signInManager.PasswordSignInAsync(request.UserName, request.Password, false, false);
+            return result.Succeeded;
+        }
+
+        public async Task<bool> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return true;
         }
     }
 }

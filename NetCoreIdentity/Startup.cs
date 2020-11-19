@@ -38,7 +38,9 @@ namespace NetCoreIdentity
 
 
             services.AddScoped<IRegistrationRepository, RegistrationRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
+            //services.AddAuthentication();
             services.AddMvc(options =>
             {
                 options.EnableEndpointRouting = false;
@@ -54,9 +56,9 @@ namespace NetCoreIdentity
             }
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseRouting();
-
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

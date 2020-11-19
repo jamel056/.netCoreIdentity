@@ -19,6 +19,17 @@
             public const string Delete = Base + "/{id}";
 
             public const string Edit = Base + "/{id}";
+
+            public const string LogIn = Base + "/logIn";
+
+            public const string LogOut = Base + "/logOut";
+        }
+
+        public static class Employee
+        {
+            public const string Base = Routes.Base + "/employee";
+
+            public const string Create = Base + "/create";
         }
     }
 }
