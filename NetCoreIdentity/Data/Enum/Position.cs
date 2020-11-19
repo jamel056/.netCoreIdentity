@@ -2,7 +2,10 @@
 {
     public enum Position
     {
-        admin,
-        employee
+        manager,
+        hr,
+        accountant,
+        employee,
+        worker
     }
 }
