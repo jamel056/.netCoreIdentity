@@ -23,6 +23,10 @@
             public const string LogIn = Base + "/logIn";
 
             public const string LogOut = Base + "/logOut";
+
+            public const string AddRole = Base + "/addRole";
+
+            public const string RemoveRole = Base + "/removeRole";
         }
 
         public static class Employee

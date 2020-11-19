@@ -82,5 +82,23 @@ namespace NetCoreIdentity.Controllers
             var IsloggedOut = await _registrationRepository.LogOut();
             return Ok(IsloggedOut);
         }
+
+        // https://localhost:5001/api/v1/registration/addRole
+        [Route(Routes.Registration.AddRole)]
+        [HttpPost]
+        public async Task<IActionResult> CreateRole(RoleRequest request)
+        {
+            var IsCreated = await _registrationRepository.CreateRole(request);
+            return Ok(IsCreated);
+        }
+
+        // https://localhost:5001/api/v1/registration/removeRole
+        [Route(Routes.Registration.RemoveRole)]
+        [HttpPost]
+        public async Task<IActionResult> DeleteRole(RoleRequest request)
+        {
+            var IsDeleted = await _registrationRepository.DeleteRole(request);
+            return Ok(IsDeleted);
+        }
     }
 }

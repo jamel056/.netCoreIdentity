@@ -16,16 +16,24 @@ namespace NetCoreIdentity.Repositories
         //************* Sign Methods *************
         Task<bool> LogIn(SignInRequest request);
         Task<bool> LogOut();
+
+        //************* Roles Methods *************
+        Task<bool> CreateRole(RoleRequest request);
+        Task<bool> DeleteRole(RoleRequest request);
+
     }
     public class RegistrationRepository : IRegistrationRepository
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public RegistrationRepository(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public RegistrationRepository(UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
         public async Task<bool> DeleteUser(string id)
@@ -78,6 +86,26 @@ namespace NetCoreIdentity.Repositories
         {
             await _signInManager.SignOutAsync();
             return true;
+        }
+
+        //************* Roles Methods *************
+        public async Task<bool> CreateRole(RoleRequest request)
+        {
+            IdentityRole newRole = new IdentityRole()
+            {
+                Name = request.RoleName
+            };
+            var result = await _roleManager.CreateAsync(newRole);
+            return result.Succeeded;
+        }
+
+        public async Task<bool> DeleteRole(RoleRequest request)
+        {
+            var roleFromDb = await _roleManager.FindByNameAsync(request.RoleName);
+            if (roleFromDb == null)
+                return false;
+            var result = await _roleManager.DeleteAsync(roleFromDb);
+            return result.Succeeded;
         }
     }
 }
