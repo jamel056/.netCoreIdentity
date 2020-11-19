@@ -20,6 +20,8 @@ namespace NetCoreIdentity.Repositories
         //************* Roles Methods *************
         Task<bool> CreateRole(RoleRequest request);
         Task<bool> DeleteRole(RoleRequest request);
+        Task<bool> AssignRoleToUser(UserRoleRequest request);
+        Task<bool> RevokeRoleFromUser(UserRoleRequest request);
 
     }
     public class RegistrationRepository : IRegistrationRepository
@@ -105,6 +107,37 @@ namespace NetCoreIdentity.Repositories
             if (roleFromDb == null)
                 return false;
             var result = await _roleManager.DeleteAsync(roleFromDb);
+            return result.Succeeded;
+        }
+
+        public async Task<bool> AssignRoleToUser(UserRoleRequest request)
+        {
+            var userFromDb = await _userManager.FindByNameAsync(request.UserName);
+            if (userFromDb == null)
+                return false;
+            var roleFromDb = await _roleManager.FindByNameAsync(request.RoleName);
+            if (roleFromDb == null)
+                return false;
+
+            var result = await _userManager.AddToRoleAsync(userFromDb, roleFromDb.Name);
+            return result.Succeeded;
+        }
+
+        public async Task<bool> RevokeRoleFromUser(UserRoleRequest request)
+        {
+            var userFromDb = await _userManager.FindByNameAsync(request.UserName);
+            if (userFromDb == null)
+                return false;
+
+            var roleFromDb = await _roleManager.FindByNameAsync(request.RoleName);
+            if (roleFromDb == null)
+                return false;
+
+            var isInRole = await _userManager.IsInRoleAsync(userFromDb, roleFromDb.Name);
+            if (!isInRole)
+                return false;
+
+            var result = await _userManager.RemoveFromRoleAsync(userFromDb, request.RoleName);
             return result.Succeeded;
         }
     }

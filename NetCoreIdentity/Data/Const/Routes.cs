@@ -27,6 +27,10 @@
             public const string AddRole = Base + "/addRole";
 
             public const string RemoveRole = Base + "/removeRole";
+
+            public const string RemoveRoleFromUser = Base + "/removeRoleFromUser";
+
+            public const string AddRoleToUser = Base + "/addRoleToUser";
         }
 
         public static class Employee

@@ -100,5 +100,23 @@ namespace NetCoreIdentity.Controllers
             var IsDeleted = await _registrationRepository.DeleteRole(request);
             return Ok(IsDeleted);
         }
+
+        // https://localhost:5001/api/v1/registration/addRoleToUser
+        [Route(Routes.Registration.AddRoleToUser)]
+        [HttpPost]
+        public async Task<IActionResult> AddRoleToUser(UserRoleRequest request)
+        {
+            var IsAssigned = await _registrationRepository.AssignRoleToUser(request);
+            return Ok(IsAssigned);
+        }
+
+        // https://localhost:5001/api/v1/registration/removeRoleFromUser
+        [Route(Routes.Registration.RemoveRoleFromUser)]
+        [HttpPost]
+        public async Task<IActionResult> RemoveRoleFromUser(UserRoleRequest request)
+        {
+            var IsRevoked = await _registrationRepository.RevokeRoleFromUser(request);
+            return Ok(IsRevoked);
+        }
     }
 }
